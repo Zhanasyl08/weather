@@ -14,7 +14,6 @@ btn.addEventListener("click", async () => {
   drawChart(data.daily);
 });
 
-// 🌍 1. Геокодинг (город → координаты)
 async function getCoords(city) {
   const url = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1`;
 
@@ -29,7 +28,6 @@ async function getCoords(city) {
   };
 }
 
-// 🌦 2. Погода
 async function getWeather(lat, lon) {
   const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`;
 
@@ -37,13 +35,10 @@ async function getWeather(lat, lon) {
   return await res.json();
 }
 
-// 🏷 Заголовок
 function renderTitle(city) {
   document.querySelector(".main_body__title h2").innerHTML =
     `ПРОГНОЗ: ${city.toUpperCase()}`;
 }
-
-// 🌤 иконки
 function getIcon(code) {
   if (code === 0) return "☀️";
   if (code <= 3) return "🌤";
@@ -54,7 +49,6 @@ function getIcon(code) {
   return "⛈";
 }
 
-// 📅 формат даты
 function formatDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleDateString("ru-RU", {
@@ -64,7 +58,6 @@ function formatDate(dateStr) {
   });
 }
 
-// 📦 неделя
 function renderWeek(daily) {
   const blocks = document.querySelectorAll(".main_body__week_days");
 
