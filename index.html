@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <section class="main">
+      <div class="_container">
+        <div class="main_body">
+          <div class="main_body__title">
+            <h2>ПРОГНОЗ ПОГОДЫ</h2>
+          </div>
+
+          <div class="main_body__selector">
+            <input id="search" type="text" placeholder="Введите город..." />
+
+            <button id="btn">Показать</button>
+          </div>
+
+          <div class="main_body__week">
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+            <div class="main_body__week_days"></div>
+          </div>
+
+          <canvas id="chart" height="100"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

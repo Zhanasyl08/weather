@@ -1,1 +1,127 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  color: white;
+}
+
+._container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 1280px) {
+  ._container {
+    max-width: 970px;
+  }
+}
+@media (max-width: 991.98px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 767.98px) {
+  ._container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+.main {
+  min-height: 120vh;
+  background-image: url("./img/abstract-fantasy-landscape-with-color-year-purple-tones.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main_body__title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.main_body__title h2 {
+  font-size: 50px;
+  color: rgb(79, 0, 103);
+  transition: 0.3s;
+}
+.main_body__title h2:hover {
+  color: rgb(157, 11, 135);
+}
+.main_body__selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 60px;
+}
+.main_body__selector select,
+.main_body__selector button,
+.main_body__selector input {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Montserrat";
+  font-size: 16px;
+  outline: none;
+}
+.main_body__selector input {
+  width: 220px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.main_body__selector input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.main_body__selector input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.main_body__selector select {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.main_body__selector button {
+  background: #440150;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main_body__selector button:hover {
+  background: #6a027c;
+}
+.main_body__week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 70px;
+}
+.main_body .card {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.main_body .card:hover {
+  transform: translateY(-5px);
+}
+@media (max-width: 991.98px) {
+  .main_body .main_body__week {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  .main_body .main_body__week {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main_body .main_body__title h2 {
+    font-size: 35px;
+  }
+}/*# sourceMappingURL=style.css.map */
